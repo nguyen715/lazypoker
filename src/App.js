@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import PlayArea from './components/PlayArea';
+import InfoArea from './components/InfoArea';
+import ChatArea from './components/ChatArea';
+import DecisionArea from './components/DecisionArea';
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InfoArea />
+      <div className="top">
+        <PlayArea />
+      </div>
+      <div className="bottom flex">
+        <ChatArea />
+        <DecisionArea />
+      </div>
     </div>
   );
 }
-
-export default App;
